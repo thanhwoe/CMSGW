@@ -46,6 +46,7 @@
                 </div> 
             </div>  
         </section>
+        <!-- body start -->
         <section class="container">
             <div class="grid wide">
                 <div class="row">
@@ -150,6 +151,7 @@
                 </div>                 
             </div>
         </section>
+        <!-- body end -->
         <section class="footer">
             <div class="grid wide">
                 <div class="row">
@@ -177,9 +179,10 @@
                 </div>
             </div>
         </section>
-        <form action="." method="POST" class="popup-login" id="form-login">
+        <!-- popup-login start -->
+        <form action="." method="POST" class="popup" id="form-login">
             <div class="popup-overlay"></div>
-            <div class="popup">
+            <div class="popup-login">
                 <div id="close-login" class="popup-close">&times;</div>
                 <div class="form">
                     <div class="logo-img"><img src="../assets/img/icon.png" alt=""></div>
@@ -200,6 +203,16 @@
                 </div>
             </div>
         </form>
+        <!-- popup-login end -->
+        <!-- popup-display-document start -->  
+        <div class="popup-document">
+            <div class="popup-overlay"></div>
+            <div class="document-container">
+                
+            </div>
+        </div>
+
+        <!-- popup-display-document end -->
     </div>
 </body>
 <script>
@@ -210,11 +223,27 @@
     });
     $("#login").on("click", function(e){
         e.preventDefault();
-        $(".popup-login").addClass("openLoginForm")
+        $(".popup").addClass("show-popup")
     });
     $("#close-login").on("click", function(){
-        $(".popup-login").removeClass("openLoginForm")
+        $(".popup").removeClass("show-popup")
     });
+    $(".documentBox").on("click", function(e){
+        console.log("text");
+        $(".popup-document").addClass("show-popup")
+    });
+    $('.popup-overlay').on("click", function(){
+        $(".popup-document").removeClass("show-popup")
+        // var popupLogin = $(".popup.show-popup");
+        // var popupDocument = $(".popup-document.show-popup")
+        // if(popupDocument){
+        //     $(".popup-document").removeClass("show-popup")
+        // }
+        // else if(popupLogin){
+        //     $(".popup").removeClass("show-popup")
+        // }
+        
+    })
     validator({
             form:'#form-login',
             errorSelector: '.form-message',

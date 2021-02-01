@@ -122,9 +122,9 @@
                 </div>
             </div>
         </section>
-        <form action="." method="POST" class="popup-login" id="form-login">
+        <form action="." method="POST" class="popup" id="form-login">
             <div class="popup-overlay"></div>
-            <div class="popup">
+            <div class="popup-login">
                 <div id="close-login" class="popup-close">&times;</div>
                 <div class="form">
                     <div class="logo-img"><img src="../assets/img/icon.png" alt=""></div>
@@ -155,10 +155,10 @@
     });
     $("#login").on("click", function(e){
         e.preventDefault();
-        $(".popup-login").addClass("openLoginForm")
+        $(".popup").addClass("show-popup")
     });
     $("#close-login").on("click", function(){
-        $(".popup-login").removeClass("openLoginForm")
+        $(".popup").removeClass("show-popup")
     });
     validator({
             form:'#form-login',
