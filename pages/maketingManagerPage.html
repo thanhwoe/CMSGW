@@ -23,7 +23,7 @@
                     <div class="main-logo"><a href="/"><img src="../assets/img/logo.png" alt="" class="logo"></a></div>
                     <div class="navbar stroke">
                         <ul class="nav-list">
-                            <li class="nav-item nav-item--consistent"><a href="/COMP1640/pages/">Home</a></li>
+                            <li class="nav-item nav-item--consistent"><a href="/">Home</a></li>
                             <li class="nav-item"><a href="/">Statistical</a></li>
                             <li class="nav-item"><a href="/">Faculties</a>
                                 <ul class="list-faculty">
@@ -46,112 +46,13 @@
                 </div> 
             </div>  
         </section>
-        <!-- body start -->
         <section class="container">
             <div class="grid wide">
-                <div class="row">
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                </div>         
-                <div class="row">
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                    <div class="col l-3">
-                        <div class="documentBox">
-                            <div class="cimbox">
-                                <div class="document-info">
-                                    <h3>Author: Mr.A</h3>
-                                    <h3>Date-time: 5/05/5555</h3>
-                                    <h3>Faculty: Bussines</h3>
-                                </div>
-                            </div>
-                            <h2><a href="#">Title</a></h2>
-                        </div>
-                    </div>
-                </div>                 
+                <div style="height: 150vh;">
+                    <h1 style="text-align: center">ĐỔ DỮ LIỆU RA ĐÂY</h1>
+                </div>              
             </div>
         </section>
-        <!-- body end -->
         <section class="footer">
             <div class="grid wide">
                 <div class="row">
@@ -179,7 +80,6 @@
                 </div>
             </div>
         </section>
-        <!-- popup-login start -->
         <form action="." method="POST" class="popup" id="form-login">
             <div class="popup-overlay"></div>
             <div class="popup-login">
@@ -203,15 +103,6 @@
                 </div>
             </div>
         </form>
-        <!-- popup-login end -->
-        <!-- popup-display-document start -->  
-        <div class="popup-document">
-            <div class="popup-overlay"></div>
-            <div class="document-container">
-            </div>
-        </div>
-
-        <!-- popup-display-document end -->
     </div>
 </body>
 <script>
@@ -227,22 +118,6 @@
     $("#close-login").on("click", function(){
         $(".popup").removeClass("show-popup")
     });
-    $(".documentBox").on("click", function(e){
-        console.log("text");
-        $(".popup-document").addClass("show-popup")
-    });
-    $('.popup-overlay').on("click", function(){
-        $(".popup-document").removeClass("show-popup")
-        // var popupLogin = $(".popup.show-popup");
-        // var popupDocument = $(".popup-document.show-popup")
-        // if(popupDocument){
-        //     $(".popup-document").removeClass("show-popup")
-        // }
-        // else if(popupLogin){
-        //     $(".popup").removeClass("show-popup")
-        // }
-        
-    })
     validator({
             form:'#form-login',
             errorSelector: '.form-message',
