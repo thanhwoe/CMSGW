@@ -54,7 +54,12 @@
                             <div class="uploadBox">
                                 <i class="fas fa-file-upload"></i>
                                 <span>Upload your files here</span>
-                                <input type="file" name="" id="">
+                                <a class="upload-btn" id="call-to-action">
+                                    <span>Select file</span>
+                                </a>
+                                <form action="." id="upload" method="POST">
+                                    <input type="file" class="upload-hidden">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -114,18 +119,6 @@
     </div>
 </body>
 <script>
-    $(".search-btn").on("click", function(){
-        $(".search-input").toggleClass("inclicked");
-        $(".search-btn").toggleClass("close");
-
-    });
-    $("#login").on("click", function(e){
-        e.preventDefault();
-        $(".popup").addClass("show-popup")
-    });
-    $("#close-login").on("click", function(){
-        $(".popup").removeClass("show-popup")
-    });
     validator({
             form:'#form-login',
             errorSelector: '.form-message',

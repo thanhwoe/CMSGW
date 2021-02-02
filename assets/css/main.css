@@ -831,8 +831,8 @@ html {
 .uploadBox {
   width: 100%;
   height: 50vh;
-  -webkit-box-shadow: 0 1px 10px black;
-          box-shadow: 0 1px 10px black;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,6 +848,7 @@ html {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  border-radius: 2px;
 }
 
 .uploadBox i {
@@ -860,12 +861,72 @@ html {
   color: #2e2e2e;
 }
 
+.uploadBox .upload-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-color: #3498db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4aa3df), to(#258cd1));
+  background-image: linear-gradient(#4aa3df 0%, #258cd1 100%);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(52, 152, 219, 0.5) 0 0 5px;
+          box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(52, 152, 219, 0.5) 0 0 5px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.uploadBox .upload-btn span {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.uploadBox .upload-btn:hover {
+  background-color: #4aa3df;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5faee3), to(#3498db));
+  background-image: linear-gradient(#5faee3 0%, #3498db 100%);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(74, 163, 223, 0.5) 0 0 5px;
+          box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(74, 163, 223, 0.5) 0 0 5px;
+}
+
+.uploadBox .upload-btn::after {
+  content: "";
+  position: absolute;
+  top: -90%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
+}
+
+.uploadBox .upload-btn:hover::after {
+  opacity: 1;
+  top: -15%;
+  left: 100%;
+  -webkit-transition-property: left, top, opacity;
+  transition-property: left, top, opacity;
+  -webkit-transition-duration: 0.7s, 0.7s, 0.15s;
+          transition-duration: 0.7s, 0.7s, 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.uploadBox .upload-hidden {
+  visibility: hidden;
+}
+
 .sidebar {
   position: relative;
   height: 80vh;
   border-radius: 3px;
-  padding: 15px;
-  border: 2px solid #f1f2f6;
+  padding: 15px 30px;
+  border: 2px solid #ccc;
   border-bottom: none;
 }
 
@@ -873,6 +934,7 @@ html {
   color: #2e2e2e;
   font-size: 2rem;
   margin: 20px 0;
+  text-align: center;
 }
 
 .sidebar ul {
@@ -881,10 +943,18 @@ html {
 }
 
 .sidebar ul li {
-  margin-bottom: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
-.header-content {
+.sidebar ul li:hover {
+  right: -4px;
+  color: #1D60A6;
+  cursor: default;
+}
+
+.header-box-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,6 +964,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -904,20 +975,31 @@ html {
   width: 100%;
   height: 50px;
   border-radius: 3px;
-  border: 1px solid #f1f2f6;
+  border: 2px solid #ccc;
   margin-bottom: 50px;
   padding: 10px;
+  overflow: hidden;
 }
 
-.header-content span {
+.header-box-content .nameFaculty {
+  position: relative;
+  width: 100%;
+}
+
+.header-box-content .nameFaculty::after {
+  content: "";
+  border-top: 2px solid #d3d8f6;
+  height: 1px;
+  width: 80%;
+  position: absolute;
+  top: 8px;
+}
+
+.header-box-content span {
   color: #2e2e2e;
   font-size: 1.6rem;
   font-weight: 500;
-}
-
-.header-content .line-css {
-  display: block;
-  border-top: 1px solid #ccc;
+  margin-right: 5px;
 }
 
 .dataBox {

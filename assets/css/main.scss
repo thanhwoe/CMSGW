@@ -542,10 +542,11 @@ html{
 .uploadBox{
     width:100%;
     height: 50vh;
-    box-shadow: 0 1px 10px rgba(0,0,0,1);
+    box-shadow: 0 1px 30px rgba(0,0,0,0.5);
     @include flexcontent();
     flex-direction: column;
     justify-content: space-around;
+    border-radius:2px;
     i{
         font-size:7rem;
         color: $primary-color;
@@ -554,48 +555,117 @@ html{
         font-size:1.5rem;
         color:$text-color;
     }
+    .upload-btn{
+        position: relative;
+        overflow: hidden;
+        padding:0;
+        background-color: #3498db;
+        background-image: linear-gradient(#4aa3df 0%, #258cd1 100%);
+        box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(52, 152, 219, 0.5) 0 0 5px;
+        border-radius: 4px;
+        background-clip: padding-box;
+        padding: 20px 40px;
+        cursor: pointer;
+        font-weight: 600;
+        span{
+            color:#fff;
+            text-transform: capitalize;
+        }
+        &:hover{
+            background-color: #4aa3df;
+            background-image: linear-gradient(#5faee3 0%, #3498db 100%);
+            box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(74, 163, 223, 0.5) 0 0 5px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: -90%;
+            left: -210%;
+            width: 200%;
+            height: 200%;
+            opacity: 1;
+            transform: rotate(45deg);
+            background: rgba(255, 255, 255, 0.13);
+            background: linear-gradient(
+                to right, 
+                rgba(255, 255, 255, 0.13) 0%,
+                rgba(255, 255, 255, 0.13) 77%,
+                rgba(255, 255, 255, 0.5) 92%,
+                rgba(255, 255, 255, 0.0) 100%
+            );
+        }
+        &:hover::after{
+            opacity: 1;
+            top: -15%;
+            left: 100%;
+            transition-property: left, top, opacity;
+            transition-duration: 0.7s, 0.7s, 0.15s;
+            transition-timing-function: ease;
+        }
+    }
+    .upload-hidden{
+        visibility: hidden;
+    }
 }
 // sidebar
 .sidebar{
     position: relative;
     height: 80vh;
     border-radius:3px;
-    padding:15px;
-    border: 2px solid #f1f2f6;
+    padding:15px 30px;
+    border: 2px solid #ccc;
     border-bottom: none;
     h4{
         color:$text-color;
         font-size:2rem;
         margin: 20px 0;
+        text-align: center;
     }
     ul{
         list-style: none;
         font-size:1.6rem;
         li{
-            margin-bottom: 10px;
+            position: relative;
+            margin-bottom: 20px;
+            font-weight: 400;
+            &:hover{
+                right: -4px;
+                color:$primary-color;
+                cursor: default;
+            }
         }
     }
 }
 // data box 
-.header-content{
+.header-box-content{
     @include flexcontent();
+    position: relative;
     align-items: flex-start;
     flex-direction: column;
     width:100%;
     height: 50px;
     border-radius: 3px;
-    border: 1px solid #f1f2f6;
+    border: 2px solid #ccc;
     margin-bottom: 50px;
     padding:10px;
-
+    overflow: hidden;
+    .nameFaculty{
+        position: relative;
+        width: 100%;
+        &::after{
+            content: "";
+            border-top: 2px solid #d3d8f6;
+            height: 1px;
+            width: 80%;
+            position: absolute;
+            top: 8px;
+        }
+    }
     span{
         color:$text-color;
         font-size:1.6rem;
         font-weight: 500;
-    }
-    .line-css{
-        display:block;
-        border-top: 1px solid #ccc;
+        margin-right: 5px;
     }
 }
 .dataBox{

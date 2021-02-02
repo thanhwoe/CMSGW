@@ -48,13 +48,13 @@ $(document).ready(function() {
       })
       //trigger our scroll event on initial load
     $(window).trigger('scroll');
-
-    // click event
+  
     $(".search-btn").on("click", function(){
         $(".search-input").toggleClass("inclicked");
         $(".search-btn").toggleClass("close");
 
     });
+    // click event
     $("#login").on("click", function(e){
         e.preventDefault();
         $(".popup").addClass("show-popup")
@@ -66,10 +66,6 @@ $(document).ready(function() {
         console.log("text");
         $(".popup-document").addClass("show-popup")
     });
-    // upload event
-    $("#call-to-action").click(function(){
-        $(".upload-hidden").click();
-    })
   });
 // validator form login
 function validator(options){

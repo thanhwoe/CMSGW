@@ -23,8 +23,8 @@
                     <div class="main-logo"><a href="/"><img src="../assets/img/logo.png" alt="" class="logo"></a></div>
                     <div class="navbar stroke">
                         <ul class="nav-list">
-                            <li class="nav-item nav-item--consistent"><a href="/">Home</a></li>
-                            <li class="nav-item"><a href="/">Statistical</a></li>
+                            <li class="nav-item nav-item--consistent"><a href="#">Home</a></li>
+                            <li class="nav-item"><a href="/COMP1640/pages/maketingManagerPage.html">Statistical</a></li>
                             <li class="nav-item"><a href="/">Faculties</a>
                                 <ul class="list-faculty">
                                     <li class="faculty-item"><a href="/">Design</a></li>
@@ -148,18 +148,6 @@
     </div>
 </body>
 <script>
-    $(".search-btn").on("click", function(){
-        $(".search-input").toggleClass("inclicked");
-        $(".search-btn").toggleClass("close");
-
-    });
-    $("#login").on("click", function(e){
-        e.preventDefault();
-        $(".popup").addClass("show-popup")
-    });
-    $("#close-login").on("click", function(){
-        $(".popup").removeClass("show-popup")
-    });
     validator({
             form:'#form-login',
             errorSelector: '.form-message',

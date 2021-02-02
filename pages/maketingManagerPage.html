@@ -23,7 +23,7 @@
                     <div class="main-logo"><a href="/"><img src="../assets/img/logo.png" alt="" class="logo"></a></div>
                     <div class="navbar stroke">
                         <ul class="nav-list">
-                            <li class="nav-item nav-item--consistent"><a href="/">Home</a></li>
+                            <li class="nav-item nav-item--consistent"><a href="/COMP1640/pages/">Home</a></li>
                             <li class="nav-item"><a href="/">Statistical</a></li>
                             <li class="nav-item"><a href="/">Faculties</a>
                                 <ul class="list-faculty">
@@ -46,16 +46,16 @@
                 </div> 
             </div>  
         </section>
-        <section class="container">
+        <section class="container" style="padding: 0;">
             <div class="grid wide">
                 <div class="row">
                     <!-- sidebar start -->
-                    <div class="col l-3">
+                    <div class="col l-3" style="margin: 0;">
                         <div class="sidebar">
                             <h4>Faculties</h4>
                             <ul>
                                 <li>Design</li>
-                                <li>IT</li>
+                                <li>Information Technology</li>
                                 <li>Business</li>
                                 <li>Tourism</li>
                             </ul>
@@ -64,10 +64,9 @@
                     <!-- sidebar end -->
                     <!-- content container start-->
                     <div class="col l-9">
-                        <div class="header-content">
+                        <div class="header-box-content">
                             <div class="nameFaculty">
-                               <span> Selecting : Business</span>
-                               <span class="line-css"></span>
+                               <span> Selecting : Business</span>                        
                             </div>
                         </div>
                         <div class="row">
@@ -148,18 +147,6 @@
     </div>
 </body>
 <script>
-    $(".search-btn").on("click", function(){
-        $(".search-input").toggleClass("inclicked");
-        $(".search-btn").toggleClass("close");
-
-    });
-    $("#login").on("click", function(e){
-        e.preventDefault();
-        $(".popup").addClass("show-popup")
-    });
-    $("#close-login").on("click", function(){
-        $(".popup").removeClass("show-popup")
-    });
     validator({
             form:'#form-login',
             errorSelector: '.form-message',
