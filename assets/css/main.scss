@@ -610,11 +610,12 @@ html{
 // sidebar
 .sidebar{
     position: relative;
-    height: 80vh;
+    height: auto;
     border-radius:3px;
     padding:15px 30px;
     border: 2px solid #ccc;
     border-bottom: none;
+    height: 100%;
     h4{
         color:$text-color;
         font-size:2rem;
@@ -637,6 +638,8 @@ html{
     }
 }
 // data box 
+.content-container-box{
+}
 .header-box-content{
     @include flexcontent();
     position: relative;
@@ -684,4 +687,32 @@ html{
         color: $text-color;
         font-size:2.5rem;
     }
+}
+// list student table
+.list-student-table{
+    position: relative;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    .col{
+        margin-bottom: 0;
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+        &:nth-child(1){
+            border-right: 1px solid #ccc;
+        }
+        &:nth-child(2){
+            border-right: 1px solid #ccc;
+        }
+        @include flexcontent();
+        h3{
+            color: $text-color;
+            text-align:center;
+            font-size: 1.8rem;
+        }
+        h4{
+            color: $text-color;
+            font-size:1.5rem;
+        }
+    }
+    
 }
