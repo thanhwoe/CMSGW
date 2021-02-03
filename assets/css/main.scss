@@ -208,6 +208,43 @@ html{
                 width: 100%;
             }
         }
+        // navbar user
+        &:nth-child(5){
+            transform: translateY(-47%);
+            span{
+                cursor: default;
+            }
+        }
+        &:nth-child(5):hover .user-menu{
+            display: block !important;
+        }
+        .navbar-img{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            top: 5px;
+        }
+        .user-menu{
+            position: absolute;
+            display:none;
+            width: 250px;
+            left: -10px;
+            top: 35px;
+            padding: 10px;
+            list-style: none;
+            background-color: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            transform-origin: left top;
+            animation: listGrowth linear 0.3s;
+            will-change: opacity, transform;
+            .user-item{
+                text-transform: capitalize;
+                margin-bottom: 10px;
+            }
+        }
     }
     
 }
