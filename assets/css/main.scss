@@ -213,6 +213,7 @@ html{
             transform: translateY(-47%);
             span{
                 cursor: default;
+                color:$text-color;
             }
         }
         &:nth-child(5):hover .user-menu{
@@ -242,7 +243,7 @@ html{
             will-change: opacity, transform;
             .user-item{
                 text-transform: capitalize;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
         }
     }
@@ -255,6 +256,7 @@ html{
 .container{
     margin-top: 120px;
     padding-bottom: 20px;
+    overflow: hidden;
     .col{
         margin-bottom: 80px;
     }
@@ -676,6 +678,30 @@ html{
 }
 // data box 
 .content-container-box{
+    fieldset{
+        width: 400px;
+        height: 100px;
+        border: 2px solid #ccc;
+        margin-bottom: 20px;        
+        padding: 20px 0;
+        text-align: center;
+        legend{
+            color: $text-color;
+            font-size:1.6rem;
+            font-weight: 500;
+        }
+        form{
+            input{
+                height: 30px;
+                margin-right: 20px;
+                text-align: center;
+            }
+            button{
+                
+                padding:5px 10px;
+            }
+        }
+    }
 }
 .header-box-content{
     @include flexcontent();
@@ -728,7 +754,7 @@ html{
 // list student table
 .list-student-table{
     position: relative;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     overflow: hidden;
     .col{
         margin-bottom: 0;
@@ -752,4 +778,42 @@ html{
         }
     }
     
+}
+// user info box
+.user-info{
+    position: relative;
+    border: 5px solid #ccc;
+    height: 100%;
+    margin-top: 30px;
+    background-color: #F0F0F0;
+    .user-info-header{
+        @include flexcontent();
+        .user-avatar{
+            position:absolute;
+            top: -20px;
+            left: -35px;        
+            width: 100px;
+            height: auto ;
+            border-radius: 50%;
+            border: 5px solid #ccc;
+        }
+        h4{
+            font-size: 2rem;    
+            position:absolute;
+            top: 20px;
+            right: 30px;
+            color:$text-color;
+        }
+    }
+    .list-user-info{
+        list-style: circle;
+        position: absolute;
+        top: 90px;
+        margin-left: 25px;
+        li{
+            color: $text-color;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+    }
 }

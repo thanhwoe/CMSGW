@@ -59,17 +59,29 @@ $(document).ready(function() {
         e.preventDefault();
         $(".popup").addClass("show-popup")
     });
-    $("#close-login").on("click", function(){
-        $(".popup").removeClass("show-popup")
-    });
     $(".documentBox").on("click", function(e){
         console.log("text");
         $(".popup-document").addClass("show-popup")
     });
+    $('.popup-overlay').on("click", function(){
+        var popDocEvent = $(".popup-document").hasClass("show-popup");
+        var popLoginEvent = $(".popup").hasClass("show-popup");
+        if(popDocEvent){
+            $(".popup-document").removeClass("show-popup")
+        }else if(popLoginEvent){
+            $(".popup").removeClass("show-popup")
+        }                
+    });
     // upload event
     $("#call-to-action").click(function(){
         $(".upload-hidden").click();
-    })
+    });
+    // navbar fix layout
+    if(!$("#nav-user-box").length){
+        document.querySelector(".search-box").setAttribute( 
+            "style", "transform: translateY(5%);"
+            );
+    }
   });
 // validator form login
 function validator(options){

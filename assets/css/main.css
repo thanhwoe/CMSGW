@@ -336,6 +336,7 @@ html {
 
 .nav-list .nav-item:nth-child(5) span {
   cursor: default;
+  color: #2e2e2e;
 }
 
 .nav-list .nav-item:nth-child(5):hover .user-menu {
@@ -372,7 +373,7 @@ html {
 
 .nav-list .nav-item .user-menu .user-item {
   text-transform: capitalize;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .navbar {
@@ -382,6 +383,7 @@ html {
 .container {
   margin-top: 120px;
   padding-bottom: 20px;
+  overflow: hidden;
 }
 
 .container .col {
@@ -1001,6 +1003,31 @@ html {
   cursor: default;
 }
 
+.content-container-box fieldset {
+  width: 400px;
+  height: 100px;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.content-container-box fieldset legend {
+  color: #2e2e2e;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.content-container-box fieldset form input {
+  height: 30px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.content-container-box fieldset form button {
+  padding: 5px 10px;
+}
+
 .header-box-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1082,7 +1109,7 @@ html {
 
 .list-student-table {
   position: relative;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   overflow: hidden;
 }
 
@@ -1118,5 +1145,56 @@ html {
 .list-student-table .col h4 {
   color: #2e2e2e;
   font-size: 1.5rem;
+}
+
+.user-info {
+  position: relative;
+  border: 5px solid #ccc;
+  height: 100%;
+  margin-top: 30px;
+  background-color: #F0F0F0;
+}
+
+.user-info .user-info-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-info .user-info-header .user-avatar {
+  position: absolute;
+  top: -20px;
+  left: -35px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+}
+
+.user-info .user-info-header h4 {
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #2e2e2e;
+}
+
+.user-info .list-user-info {
+  list-style: circle;
+  position: absolute;
+  top: 90px;
+  margin-left: 25px;
+}
+
+.user-info .list-user-info li {
+  color: #2e2e2e;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=main.css.map */
