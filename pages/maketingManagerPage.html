@@ -65,11 +65,11 @@
                         <div class="sidebar">
                             <h4>Faculties</h4>
                             <ul>
-                                <li>All</li>
-                                <li>Design</li>
-                                <li>Information Technology</li>
-                                <li>Business</li>
-                                <li>Tourism</li>
+                                <li id="1" class="category-sidebar" data-id="data-all">All</li>
+                                <li id="2" class="category-sidebar" data-id="data-design">Design</li>
+                                <li id="3" class="category-sidebar" data-id="data-it">Information Technology</li>
+                                <li id="4" class="category-sidebar" data-id="data-business">Business</li>
+                                <li id="5"class="category-sidebar" data-id="data-tourism">Tourism</li>
                             </ul>
                         </div>
                     </div>
@@ -79,115 +79,551 @@
                         <div class="content-container-box">
                             <div class="header-box-content">
                                 <div class="nameFaculty">
-                                   <span> Selecting : Business</span>                        
+                                   <span> Selecting:</span> <span id="selectCate"></span>                        
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col l-4">
-                                    <div class="dataBox">
-                                        <h4>Tổng số bài đăng</h4>
-                                        <span>10</span>
+                            <!-- data container start-->
+                            <div class="content-container-data" id="data-all">
+                                <div class="row">
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đăng</h4>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đã duyệt</h4>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đang chờ duyệt</h4>
+                                            <span>15</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col l-4">
-                                    <div class="dataBox">
-                                        <h4>Tổng số bài đã duyệt</h4>
-                                        <span>12</span>
-                                    </div>
-                                </div>
-                                <div class="col l-4">
-                                    <div class="dataBox">
-                                        <h4>Tổng số bài đang chờ duyệt</h4>
-                                        <span>15</span>
+                                <fieldset>
+                                    <legend>Download documents (.zip)</legend>
+                                    <form action="." method="POST">
+                                        <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
+                                        <button type="submit">Download</button>
+                                    </form>
+                                  </fieldset>
+                                <!-- table list students -->
+                                <div class="row">
+                                    <div class="col l-12">
+                                        <div class="list-student-table">
+                                            <div class="row">  
+                                                <div class="col l-12">                                                                                  
+                                                    <h3>List students</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Student name</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Faculty</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Number of document</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <fieldset>
-                                <legend>Download documents (.zip)</legend>
-                                <form action="." method="POST">
-                                    <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
-                                    <button type="submit">Download</button>
-                                </form>
-                              </fieldset>
-                            <!-- table list students -->
-                            <div class="row">
-                                <div class="col l-12">
-                                    <div class="list-student-table">
-                                        <div class="row">  
-                                            <div class="col l-12">                                                                                  
-                                                <h3>List students</h3>
-                                            </div>
+                            <div class="content-container-data" id="data-design">
+                                <div class="row">
+                                    <div class="col l-4">
+                                        <div class="dataBox" style="background-color: aquamarine;">
+                                            <h4>Tổng số bài đăng</h4>
+                                            <span>11</span>
                                         </div>
-                                        <div class="row">
-                                            <div class="col l-4">
-                                                <h4>Student name</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>Faculty</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>Number of document</h4>
-                                            </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đã duyệt</h4>
+                                            <span>12</span>
                                         </div>
-                                        <div class="row">
-                                            <div class="col l-4">
-                                                <h4>Mr.A</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>Bussines</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>50</h4>
-                                            </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đang chờ duyệt</h4>
+                                            <span>15</span>
                                         </div>
-                                        <div class="row">
-                                            <div class="col l-4">
-                                                <h4>Mr.A</h4>
+                                    </div>
+                                </div>
+                                <fieldset>
+                                    <legend>Download documents (.zip)</legend>
+                                    <form action="." method="POST">
+                                        <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
+                                        <button type="submit">Download</button>
+                                    </form>
+                                  </fieldset>
+                                <!-- table list students -->
+                                <div class="row">
+                                    <div class="col l-12">
+                                        <div class="list-student-table">
+                                            <div class="row">  
+                                                <div class="col l-12">                                                                                  
+                                                    <h3>List students</h3>
+                                                </div>
                                             </div>
-                                            <div class="col l-4">
-                                                <h4>Bussines</h4>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Student name</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Faculty</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Number of document</h4>
+                                                </div>
                                             </div>
-                                            <div class="col l-4">
-                                                <h4>50</h4>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
-                                        <div class="row">
-                                            <div class="col l-4">
-                                                <h4>Mr.A</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>Bussines</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>50</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col l-4">
-                                                <h4>Mr.A</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>Bussines</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>50</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col l-4">
-                                                <h4>Mr.A</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>Bussines</h4>
-                                            </div>
-                                            <div class="col l-4">
-                                                <h4>50</h4>
-                                            </div>
-                                        </div>
-                                        
                                     </div>
                                 </div>
                             </div>
+                            <div class="content-container-data" id="data-it">
+                                <div class="row">
+                                    <div class="col l-4">
+                                        <div class="dataBox" style="background-color: plum;">
+                                            <h4>Tổng số bài đăng</h4>
+                                            <span>11</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đã duyệt</h4>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đang chờ duyệt</h4>
+                                            <span>15</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <fieldset>
+                                    <legend>Download documents (.zip)</legend>
+                                    <form action="." method="POST">
+                                        <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
+                                        <button type="submit">Download</button>
+                                    </form>
+                                  </fieldset>
+                                <!-- table list students -->
+                                <div class="row">
+                                    <div class="col l-12">
+                                        <div class="list-student-table">
+                                            <div class="row">  
+                                                <div class="col l-12">                                                                                  
+                                                    <h3>List students</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Student name</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Faculty</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Number of document</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container-data" id="data-business">
+                                <div class="row">
+                                    <div class="col l-4">
+                                        <div class="dataBox" style="background-color: gray;">
+                                            <h4>Tổng số bài đăng</h4>
+                                            <span>11</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đã duyệt</h4>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đang chờ duyệt</h4>
+                                            <span>15</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <fieldset>
+                                    <legend>Download documents (.zip)</legend>
+                                    <form action="." method="POST">
+                                        <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
+                                        <button type="submit">Download</button>
+                                    </form>
+                                  </fieldset>
+                                <!-- table list students -->
+                                <div class="row">
+                                    <div class="col l-12">
+                                        <div class="list-student-table">
+                                            <div class="row">  
+                                                <div class="col l-12">                                                                                  
+                                                    <h3>List students</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Student name</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Faculty</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Number of document</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container-data" id="data-tourism">
+                                <div class="row">
+                                    <div class="col l-4">
+                                        <div class="dataBox" style="background-color: yellowgreen;">
+                                            <h4>Tổng số bài đăng</h4>
+                                            <span>11</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đã duyệt</h4>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="col l-4">
+                                        <div class="dataBox">
+                                            <h4>Tổng số bài đang chờ duyệt</h4>
+                                            <span>15</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <fieldset>
+                                    <legend>Download documents (.zip)</legend>
+                                    <form action="." method="POST">
+                                        <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
+                                        <button type="submit">Download</button>
+                                    </form>
+                                  </fieldset>
+                                <!-- table list students -->
+                                <div class="row">
+                                    <div class="col l-12">
+                                        <div class="list-student-table">
+                                            <div class="row">  
+                                                <div class="col l-12">                                                                                  
+                                                    <h3>List students</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Student name</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Faculty</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Number of document</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col l-4">
+                                                    <h4>Mr.A</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>Bussines</h4>
+                                                </div>
+                                                <div class="col l-4">
+                                                    <h4>50</h4>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- data container end -->
                         </div>
                         
                     </div>

@@ -82,6 +82,25 @@ $(document).ready(function() {
             "style", "transform: translateY(5%);"
             );
     }
+    // show container content data
+    var categoryList= ["All", "Design", "Information Technology", "Business" , "Tourism"];
+    var cateSidebar = document.querySelectorAll(".category-sidebar");
+    var contentData = document.querySelectorAll(".content-container-data");
+    for(var i = 0; i < cateSidebar.length; i++){
+        cateSidebar[i].addEventListener('click', function(){
+            document.querySelector("#selectCate").innerText= categoryList[this.id-1]
+            for(var i = 0; i < contentData.length; i++){
+                contentData[i].className = 'content-container-data'
+            }
+            document.getElementById(this.dataset.id).className= 'content-container-data active';
+            for(var i = 0; i < cateSidebar.length; i++){
+                cateSidebar[i].className ='category-sidebar'
+            }
+            this.className ='category-sidebar active';      
+        });
+
+    }
+
   });
 // validator form login
 function validator(options){
