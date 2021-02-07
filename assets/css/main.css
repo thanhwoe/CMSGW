@@ -163,6 +163,10 @@ html {
   font-size: 2.6rem;
 }
 
+.main-logo {
+  z-index: 1;
+}
+
 .main-logo .logo {
   width: 200px;
 }
@@ -1096,7 +1100,7 @@ html {
   content: "";
   border-top: 2px solid #d3d8f6;
   height: 1px;
-  width: 80%;
+  width: 200%;
   position: absolute;
   top: 8px;
 }

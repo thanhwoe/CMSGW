@@ -100,7 +100,24 @@ $(document).ready(function() {
         });
 
     }
-
+    // reponsive navbar
+    $("#navFaculties").on("click",function(){
+        $(".list-faculty").attr("display","block")
+    })
+    $("#nav-user-box").on("click",function(){
+        $(".user-menu").attr("display","block")
+    })
+    $(".main-logo").on("click",function(){
+        $(".navbar").toggleClass("open");
+    })
+    $(window).resize(function() {
+        var width = $(window).width();
+        if (width < 768){
+            $("#link-logo").removeAttr("href");
+            $(".logo").attr("src","../assets/img/icon.png");
+            $(".logo").attr("style", "height:40px;width:40px; margin-left:5px")
+        }
+      });
   });
 // validator form login
 function validator(options){
