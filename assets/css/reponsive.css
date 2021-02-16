@@ -45,4 +45,17 @@
     .nav-list .nav-item:nth-child(5) {
         transform: translateY(0)
     }
+    .search-input{
+        border-radius: unset !important;
+        width: 40% !important;
+    }
+    .search-btn{
+        display:none !important;
+    }
+    .search-btn--submit{
+        right:25% !important;
+        transform: translate(50%, 6px) !important;
+        display: block !important;
+        top:0 !important;
+    }
 }

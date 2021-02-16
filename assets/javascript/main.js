@@ -59,6 +59,9 @@ $(document).ready(function() {
         e.preventDefault();
         $(".popup").addClass("show-popup")
     });
+    $("#close-login").on("click", function(){
+        $(".popup").removeClass("show-popup")
+    });
     $(".documentBox").on("click", function(e){
         console.log("text");
         $(".popup-document").addClass("show-popup")

@@ -207,6 +207,8 @@ html {
   -webkit-animation: listGrowth linear 0.3s;
           animation: listGrowth linear 0.3s;
   will-change: opacity, transform;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
 }
 
 .nav-list .nav-item .list-faculty .faculty-item {
@@ -345,6 +347,8 @@ html {
 
 .nav-list .nav-item:nth-child(5):hover .user-menu {
   display: block !important;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
 }
 
 .nav-list .nav-item .navbar-img {
