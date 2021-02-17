@@ -58,4 +58,13 @@
         display: block !important;
         top:0 !important;
     }
+    .sidebar{
+        display:none;
+    }
+    .mobile-sidebar{
+        display: block;
+    }
+    .content-container-box{
+        height:250vh;
+    }
 }

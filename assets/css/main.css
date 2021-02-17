@@ -389,6 +389,7 @@ html {
 }
 
 .container {
+  padding-top: 10px;
   margin-top: 120px;
   padding-bottom: 20px;
   overflow: hidden;
@@ -781,6 +782,21 @@ html {
   font-weight: 500;
 }
 
+.popup-login .form .popup-element #login-checkbox {
+  width: 13px;
+}
+
+.popup-login .form .popup-element #login-checkbox ~ span {
+  font-size: 1.4rem;
+  color: #2e2e2e;
+  margin-left: 5px;
+}
+
+.popup-login .form .popup-element #login-checkbox ~ span a {
+  color: #2e2e2e;
+  margin-left: 20px;
+}
+
 .popup-element.invalid > input {
   background-color: rgba(255, 0, 0, 0.1) !important;
 }
@@ -987,6 +1003,7 @@ html {
   border: 2px solid #ccc;
   border-bottom: none;
   height: 100%;
+  display: block;
 }
 
 .sidebar h4 {
@@ -1090,7 +1107,7 @@ html {
   height: 50px;
   border-radius: 3px;
   border: 2px solid #ccc;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 10px;
   overflow: hidden;
 }
@@ -1215,6 +1232,7 @@ html {
   height: auto;
   border-radius: 50%;
   border: 5px solid #ccc;
+  background-position: center;
 }
 
 .user-info .user-info-header h4 {
@@ -1236,5 +1254,54 @@ html {
   color: #2e2e2e;
   font-size: 1.4rem;
   margin-bottom: 15px;
+}
+
+.mobile-sidebar {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.mobile-sidebar .mSidebar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.mobile-sidebar .mSidebar-list::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-sidebar .mSidebar-list .mSidebar-item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  overflow: hidden;
+  width: 110px;
+  height: 40px;
+  display: block;
+  border-radius: 5px;
+  font-weight: 350;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+.mobile-sidebar .mSidebar-list .mSidebar-item.active {
+  background-color: #33d9b2;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */

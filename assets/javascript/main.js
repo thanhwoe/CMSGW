@@ -89,6 +89,8 @@ $(document).ready(function() {
     var categoryList= ["All", "Design", "Information Technology", "Business" , "Tourism"];
     var cateSidebar = document.querySelectorAll(".category-sidebar");
     var contentData = document.querySelectorAll(".content-container-data");
+    var mobileSibar = document.querySelectorAll(".mSidebar-item");
+    // category pc
     for(var i = 0; i < cateSidebar.length; i++){
         cateSidebar[i].addEventListener('click', function(){
             document.querySelector("#selectCate").innerText= categoryList[this.id-1]
@@ -101,7 +103,20 @@ $(document).ready(function() {
             }
             this.className ='category-sidebar active';      
         });
-
+    }
+    // category mobile
+    for(var i = 0; i < mobileSibar.length; i++){
+        mobileSibar[i].addEventListener('click', function(){
+            document.querySelector("#selectCate").innerText= categoryList[this.id-1]
+            for(var i = 0; i < contentData.length; i++){
+                contentData[i].className = 'content-container-data'
+            }
+            document.getElementById(this.dataset.id).className= 'content-container-data active';
+            for(var i = 0; i < mobileSibar.length; i++){
+                mobileSibar[i].className ='mSidebar-item'
+            }
+            this.className ='mSidebar-item active'; 
+        });
     }
     // reponsive navbar
     $("#navFaculties").on("click",function(){

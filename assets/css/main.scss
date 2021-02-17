@@ -258,6 +258,7 @@ html{
 }
 // body
 .container{
+    padding-top: 10px;
     margin-top: 120px;
     padding-bottom: 20px;
     overflow: hidden;
@@ -507,6 +508,18 @@ html{
                 color:  rgb(245, 86, 80) ;
                 font-weight: 500; 
             }
+            #login-checkbox{
+                width: 13px;
+            }
+            #login-checkbox ~ span{
+                font-size: 1.4rem;
+                color: $text-color;
+                margin-left: 5px;
+                a{
+                    color: $text-color;
+                    margin-left: 20px;
+                } 
+            }
         }
     }
 }
@@ -661,6 +674,7 @@ html{
     border: 2px solid #ccc;
     border-bottom: none;
     height: 100%;
+    display:block;
     h4{
         color:$text-color;
         font-size:2rem;
@@ -689,7 +703,7 @@ html{
 }
 // data box 
 .content-container-box{
-    position: relative;    
+    position: relative;
     height: 120vh;
     fieldset{
         width: 400px;
@@ -738,7 +752,7 @@ html{
     height: 50px;
     border-radius: 3px;
     border: 2px solid #ccc;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding:10px;
     overflow: hidden;
     .nameFaculty{
@@ -822,6 +836,7 @@ html{
             height: auto ;
             border-radius: 50%;
             border: 5px solid #ccc;
+            background-position: center;
         }
         h4{
             font-size: 2rem;    
@@ -840,6 +855,45 @@ html{
             color: $text-color;
             font-size: 1.4rem;
             margin-bottom: 15px;
+        }
+    }
+}
+// mobile sidebar
+.mobile-sidebar{
+    display: none;
+    margin-bottom: 20px;
+    .mSidebar-list{
+        @include flexcontent();
+        justify-content:space-between;
+        list-style: none;
+        max-width: 100%;
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+            display:none;
+        }
+        .mSidebar-item{
+            flex-shrink: 0;
+            margin-right: 10px;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            text-align: center;
+            overflow: hidden;
+            width: 110px;
+            height: 40px;
+            display: block;
+            border-radius: 5px;
+            font-weight: 350;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            // display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // -webkit-line-clamp: 2;
+            // user-select: none;
+            
+            &.active{
+                background-color: #33d9b2;
+                font-weight: 500;
+            }
         }
     }
 }

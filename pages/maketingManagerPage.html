@@ -62,7 +62,7 @@
             <div class="grid wide">
                 <div class="row">
                     <!-- sidebar start -->
-                    <div class="col l-3" style="margin: 0;">
+                    <div class="col l-3 m-0 c-0" style="margin: 0;">
                         <div class="sidebar">
                             <h4>Faculties</h4>
                             <ul>
@@ -76,42 +76,53 @@
                     </div>
                     <!-- sidebar end -->
                     <!-- content container start-->                    
-                    <div class="col l-9">
+                    <div class="col l-9 m-12 c-12">
                         <div class="content-container-box">
                             <div class="header-box-content">
                                 <div class="nameFaculty">
                                    <span> Selecting:</span> <span id="selectCate"></span>                        
                                 </div>
                             </div>
+                            <div class="mobile-sidebar">
+                                <ul class="mSidebar-list">
+                                    <li id="1" class="mSidebar-item" data-id="data-all">All</li>
+                                    <li id="2" class="mSidebar-item" data-id="data-design">Design</li>
+                                    <li id="3" class="mSidebar-item" data-id="data-it">Information Technology</li>
+                                    <li id="4" class="mSidebar-item" data-id="data-business">Business</li>
+                                    <li id="5"class="mSidebar-item" data-id="data-tourism">Tourism</li>
+                                </ul>
+                            </div>
                             <!-- data container start-->
                             <div class="content-container-data" id="data-all">
                                 <div class="row">
-                                    <div class="col l-4">
+                                    <div class="col l-4 c-12">
                                         <div class="dataBox">
                                             <h4>Tổng số bài đăng</h4>
                                             <span>10</span>
                                         </div>
                                     </div>
-                                    <div class="col l-4">
+                                    <div class="col l-4 c-12">
                                         <div class="dataBox">
                                             <h4>Tổng số bài đã duyệt</h4>
                                             <span>12</span>
                                         </div>
                                     </div>
-                                    <div class="col l-4">
+                                    <div class="col l-4 c-12">
                                         <div class="dataBox">
                                             <h4>Tổng số bài đang chờ duyệt</h4>
                                             <span>15</span>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
-                                <fieldset>
-                                    <legend>Download documents (.zip)</legend>
-                                    <form action="." method="POST">
-                                        <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
-                                        <button type="submit">Download</button>
-                                    </form>
-                                  </fieldset>
+                                <div class="row">
+                                    <fieldset class="col l-5 c-12">
+                                        <legend>Download documents (.zip)</legend>
+                                        <form action="." method="POST">
+                                            <input type="text" data-toggle="datepicker" data-date-format="yyyy.mm" placeholder="Pick month">
+                                            <button type="submit">Download</button>
+                                        </form>
+                                    </fieldset>
+                                </div>
                                 <!-- table list students -->
                                 <div class="row">
                                     <div class="col l-12">
