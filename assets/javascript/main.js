@@ -41,7 +41,16 @@ $(document).ready(function() {
       });
   
     }
-  
+    
+    // auto complete search keywords
+    var searchKeywords = ["design","information technology","business","tourism","vũ óc chó"]
+    $(".search-input").autocomplete({
+        delay:100,
+        source: searchKeywords,
+        _resizeMenu: function() {
+            this.menu.element.outerWidth( 100 );
+        }
+    });
     //on or scroll, detect elements in view
     $(window).on('scroll resize', function() {
         check_if_in_view()

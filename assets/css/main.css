@@ -997,7 +997,6 @@ html {
 
 .sidebar {
   position: relative;
-  height: auto;
   border-radius: 3px;
   padding: 15px 30px;
   border: 2px solid #ccc;
@@ -1303,5 +1302,24 @@ html {
 .mobile-sidebar .mSidebar-list .mSidebar-item.active {
   background-color: #33d9b2;
   font-weight: 500;
+}
+
+.ui-autocomplete {
+  z-index: 2;
+  background: ivory;
+  border-radius: 3px;
+  width: 100px;
+}
+
+.ui-menu {
+  color: #2e2e2e;
+  list-style: none;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.ui-menu .ui-menu-item {
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=main.css.map */

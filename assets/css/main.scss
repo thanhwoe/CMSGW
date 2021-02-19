@@ -668,7 +668,6 @@ html{
 // sidebar
 .sidebar{
     position: relative;
-    height: auto;
     border-radius:3px;
     padding:15px 30px;
     border: 2px solid #ccc;
@@ -897,3 +896,20 @@ html{
         }
     }
 }
+// custom jquery ui
+.ui-autocomplete {
+    z-index: 2;
+    background: ivory;
+    border-radius: 3px;
+    width:100px;
+}
+.ui-menu{
+    color:$text-color;
+    list-style: none;
+    padding:5px 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    .ui-menu-item{
+        margin-bottom: 5px;
+    }
+}  
