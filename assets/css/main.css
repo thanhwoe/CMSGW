@@ -1322,4 +1322,108 @@ html {
 .ui-menu .ui-menu-item {
   margin-bottom: 5px;
 }
+
+.admin-heading {
+  background-color: #1D60A6;
+}
+
+.admin-heading .admin-navbar {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-heading .admin-navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.admin-heading .admin-navbar ul li {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 80px;
+}
+
+.admin-body {
+  position: relative;
+  margin-top: 50px;
+}
+
+.admin-body .admin-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  font-size: 2.6rem;
+}
+
+.admin-body .btn {
+  cursor: pointer;
+  height: 26px;
+  width: auto;
+  padding: 5px;
+  border: 2px solid #1D60A6;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.admin-body .btn:hover {
+  background-color: #1D60A6;
+  font-weight: 500;
+}
+
+.admin-body .btn-tag {
+  margin: 0 5px;
+}
+
+.admin-body .btn-a {
+  top: 8px;
+  position: relative;
+}
+
+.admin-body .admin-search {
+  height: 26px;
+  position: relative;
+  top: -2px;
+}
+
+.admin-body .admin-search:focus {
+  outline: #1D60A6 auto 1px;
+  outline-offset: 0px;
+}
+
+.admin-body .table {
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-collapse: collapse;
+}
+
+.admin-body .table th, .admin-body .table td {
+  height: 25px;
+  border: 1px solid #ccc;
+}
 /*# sourceMappingURL=main.css.map */

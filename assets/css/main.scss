@@ -913,3 +913,71 @@ html{
         margin-bottom: 5px;
     }
 }  
+// admin site css
+.admin-heading{
+    background-color: $primary-color;
+    
+    .admin-navbar{
+        height:50px;
+        @include flexcontent();
+        ul{
+            @include flexcontent();
+            list-style: none;
+            li{ 
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin: 0 80px;
+            }
+        }
+    }
+}
+.admin-body{
+    position: relative;
+    margin-top:50px;
+    .admin-title{
+        @include flexcontent();
+        margin-bottom: 30px;
+        font-size: 2.6rem;
+    }
+    .btn{
+        cursor: pointer;
+        height:26px;
+        width: auto;
+        padding:5px;
+        border: 2px solid $primary-color;
+        background-color:#FFFFFF;
+        border-radius:2px;
+        font-size: 1.4rem;
+        transition-duration: 0.4s;
+        &:hover{
+            background-color: $primary-color;
+            font-weight: 500;
+        }
+    }
+    .btn-tag{
+        margin: 0 5px;
+    }
+    .btn-a{
+        top:8px;
+        position: relative;
+    }
+    .admin-search{
+        height:26px;
+        position: relative;
+        top: -2px;
+        &:focus{
+            outline:$primary-color auto 1px;
+            outline-offset: 0px;
+        }
+        
+    }
+    .table{
+        margin-top: 20px;
+        border:2px solid #ccc;
+        border-collapse: collapse;
+        th,td{
+            height:25px;
+            border: 1px solid #ccc;
+        }
+    }
+}
