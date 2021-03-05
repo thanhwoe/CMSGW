@@ -971,13 +971,22 @@ html{
         }
         
     }
-    .table{
-        margin-top: 20px;
-        border:2px solid #ccc;
-        border-collapse: collapse;
-        th,td{
-            height:25px;
-            border: 1px solid #ccc;
+    
+    // create user page
+    .admin-createUser{
+        .form-group{
+            margin: 15px 0;
+            text-align: center;
         }
+    }
+}
+.table{
+    margin-top: 20px;
+    width: 100%;
+    border:2px solid #ccc;
+    border-collapse: collapse;
+    th,td{
+        height:25px;
+        border: 1px solid #ccc;
     }
 }

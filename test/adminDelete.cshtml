@@ -1,0 +1,41 @@
+@model WebEnterprise.ViewModels.System.Users.UserDeleteRequest
+
+@{
+    ViewData["Title"] = "Xóa người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section class="admin-body">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-12">
+                    <h1 class="admin-title">Delete User</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l-4">
+                    <a class="btn btn-a" asp-action="Index" asp-controller="User">Back to list</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Id)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.Id)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <form asp-action="Delete">
+                        <input asp-for="Id" type="hidden" />
+                        <input type="submit" value="Delete" class="btn" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

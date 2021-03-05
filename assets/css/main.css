@@ -1416,13 +1416,19 @@ html {
   outline-offset: 0px;
 }
 
-.admin-body .table {
+.admin-body .admin-createUser .form-group {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.table {
   margin-top: 20px;
+  width: 100%;
   border: 2px solid #ccc;
   border-collapse: collapse;
 }
 
-.admin-body .table th, .admin-body .table td {
+.table th, .table td {
   height: 25px;
   border: 1px solid #ccc;
 }
