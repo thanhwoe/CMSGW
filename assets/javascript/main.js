@@ -85,9 +85,23 @@ $(document).ready(function() {
         }                
     });
     // upload event
-    $("#call-to-action").click(function(){
-        $(".upload-hidden").click();
+    var acceptUpload;
+    
+    $('input[type="checkbox"]').click(function(){
+        if($("#uploadCheckbox").prop('checked')===true){
+            acceptUpload = true;
+        }else{
+            acceptUpload = false;
+        }
     });
+    $("#call-to-action").click(function () {
+        if(acceptUpload===true){
+            $(".upload-hidden").click();
+        }else{
+            alert('You must agree to Term and Conditions before upload')
+        }
+        
+    })
     // navbar fix layout
     if(!$("#nav-user-box").length){
         document.querySelector(".search-box").setAttribute( 

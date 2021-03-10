@@ -660,6 +660,13 @@ html{
             transition-duration: 0.7s, 0.7s, 0.15s;
             transition-timing-function: ease;
         }
+        
+    }
+    .uploadCheckbox{
+        @include flexcontent();
+        span{
+            margin-left: 10px;
+        }
     }
     .upload-hidden{
         visibility: hidden;
