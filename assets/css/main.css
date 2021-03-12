@@ -1448,4 +1448,78 @@ html {
   height: 25px;
   border: 1px solid #ccc;
 }
+
+.coor-list-docx {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.coor-list-docx table td:nth-child(1) {
+  width: 25%;
+}
+
+.coor-list-docx table td:nth-child(2) {
+  width: 20%;
+}
+
+.coor-list-docx table td:nth-child(3) {
+  width: 20%;
+}
+
+.coor-list-docx table td:nth-child(4) {
+  width: 35%;
+}
+
+.coor-list-docx .handle-coor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 15px;
+}
+
+.coor-list-docx .handle-coor a {
+  width: 50px;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #2e2e2e;
+  font-weight: 500;
+}
+
+.coor-list-docx .handle-coor a:nth-child(1) {
+  background-color: #63cdda;
+}
+
+.coor-list-docx .handle-coor a:nth-child(1):hover {
+  background-color: #3dc1d3;
+}
+
+.coor-list-docx .handle-coor a:nth-child(2) {
+  background-color: #f5cd79;
+}
+
+.coor-list-docx .handle-coor a:nth-child(2):hover {
+  background-color: #f1be4e;
+}
+
+.btn-select-docx {
+  padding: 5px 10px;
+  border: none;
+  background-color: #596275;
+  color: #FFFFFF;
+}
+
+.btn-select-docx:hover {
+  background-color: #303952;
+}
 /*# sourceMappingURL=main.css.map */

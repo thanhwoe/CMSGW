@@ -997,3 +997,61 @@ html{
         border: 1px solid #ccc;
     }
 }
+// coordinator page
+.coor-list-docx{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    table{
+        td{
+            &:nth-child(1){
+                width: 25%;
+            }
+            &:nth-child(2){
+                width: 20%;
+            }
+            &:nth-child(3){
+                width: 20%;
+            }
+            &:nth-child(4){
+                width: 35%;
+            }
+        }
+    }
+    .handle-coor{
+        @include flexcontent();
+        justify-content: space-around;
+        padding: 0 15px;
+        a{
+            width: 50px;
+            padding: 5px;
+            margin:5px;
+            text-decoration: none;
+            border-radius: 4px;
+            color: $text-color;
+            font-weight: 500;
+            &:nth-child(1){
+                background-color: #63cdda;
+                &:hover{
+                    background-color: #3dc1d3;
+                }
+            }
+            &:nth-child(2){
+                background-color: #f5cd79;
+                &:hover{
+                    background-color: #f1be4e;
+                }
+            }
+        }
+
+    }
+}
+.btn-select-docx{
+    padding: 5px 10px;
+    border: none;
+    background-color: #596275;
+    color: $text-quote;
+    &:hover{
+        background-color: #303952;
+    }
+}
