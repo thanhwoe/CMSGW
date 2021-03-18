@@ -167,6 +167,7 @@ function validator(options){
           var errorMessage = rule.test(inputElement.value)
           var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
           if(errorMessage){
+            //   document.querySelector(".input-effect").setAttribute("style", `content:'${errorMessage}'`)
               errorElement.innerText= errorMessage;
               inputElement.parentElement.classList.add('invalid')
           }

@@ -687,8 +687,8 @@ html {
 
 .popup-login {
   width: 350px;
-  background-color: ivory;
-  border-radius: 5px;
+  background-color: #dfe6e9;
+  border-radius: 10px;
   padding: 0 32px;
   margin: auto;
   position: relative;
@@ -726,11 +726,14 @@ html {
   font-size: 3.4rem;
   font-weight: 600;
   color: #2e2e2e;
-  margin: 20px 0;
+  margin: 20px 0 50px;
 }
 
 .popup-login .form .popup-element {
-  padding: 8px 20px;
+  margin: 20px 0 30px;
+  height: 40px;
+  border-bottom: 2px solid #adadad;
+  position: relative;
 }
 
 .popup-login .form .popup-element label {
@@ -742,18 +745,50 @@ html {
 
 .popup-login .form .popup-element input {
   width: 100%;
-  padding: 8px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  padding: 0 5px;
   outline: none;
-  border: 1px solid #aaa;
+  border: none;
   background: none;
-  border-radius: 5px;
+  color: #333;
+  height: 35px;
 }
 
-.popup-login .form .popup-element input:focus {
-  outline: #84BCED auto 1px;
-  outline-offset: 0px;
+.popup-login .form .popup-element .focuss + .input-effect::before {
+  top: 2px;
+}
+
+.popup-login .form .popup-element .focuss + .input-effect::after {
+  width: 100% !important;
+}
+
+.popup-login .form .popup-element .input-effect {
+  font-size: 1.5rem;
+  font-weight: 450;
+}
+
+.popup-login .form .popup-element .input-effect::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  left: 5px;
+  top: 60%;
+  color: #2e2e2e;
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
+  z-index: -1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.popup-login .form .popup-element .input-effect::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg, #81ecec, #00cec9, #6c5ce7);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .popup-login .form .popup-element button {
@@ -776,8 +811,9 @@ html {
 }
 
 .popup-login .form .popup-element .form-message {
+  position: relative;
   font-size: 12px;
-  margin-top: 5px;
+  top: 7px;
   color: #f55650;
   font-weight: 500;
 }
@@ -795,10 +831,6 @@ html {
 .popup-login .form .popup-element #login-checkbox ~ span a {
   color: #2e2e2e;
   margin-left: 20px;
-}
-
-.popup-element.invalid > input {
-  background-color: rgba(255, 0, 0, 0.1) !important;
 }
 
 .documentBox {
@@ -1009,6 +1041,13 @@ html {
 
 .uploadBox .upload-hidden {
   visibility: hidden;
+}
+
+.uploadBox .input-title {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  font-size: 1.5rem;
 }
 
 .sidebar {
@@ -1440,13 +1479,14 @@ html {
 .table {
   margin-top: 20px;
   width: 100%;
-  border: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
   border-collapse: collapse;
 }
 
 .table th, .table td {
   height: 25px;
-  border: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 0;
 }
 
 .coor-list-docx {

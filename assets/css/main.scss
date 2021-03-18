@@ -427,8 +427,8 @@ html{
 }
 .popup-login{
     width: 350px;
-    background-color: ivory;
-    border-radius: 5px;
+    background-color: #dfe6e9;
+    border-radius: 10px;
     padding: 0 32px;
     margin: auto;
     position: relative;
@@ -462,10 +462,13 @@ html{
             font-size: 3.4rem;
             font-weight: 600;
             color: $text-color;
-            margin: 20px 0;
+            margin: 20px 0 50px;
         }
         .popup-element{
-            padding: 8px 20px;
+            margin: 20px 0 30px;
+            height: 40px;
+            border-bottom: 2px solid #adadad;
+            position: relative;
             label{
                 display: block;
                 font-size: 1.4rem;
@@ -474,15 +477,45 @@ html{
             }
             input{
                 width: 100%;
-                padding: 8px 10px;
-                box-sizing: border-box;
+                padding: 0 5px;
                 outline: none;
-                border: 1px solid #aaa;
+                border: none;
                 background: none;
-                border-radius: 5px;
-                &:focus{
-                    outline: #84BCED auto 1px;
-                    outline-offset: 0px;
+                color: #333;
+                height: 35px;
+                // &:focus{
+                //     outline: #84BCED auto 1px;
+                //     outline-offset: 0px;
+                // }
+            }
+            .focuss + .input-effect::before{
+                top:2px;
+            }
+            .focuss + .input-effect::after{
+                width: 100% !important;
+            }
+            .input-effect{
+                font-size: 1.5rem;
+                font-weight: 450;
+                &::before{
+                    content: attr(data-placeholder);
+                    position: absolute;
+                    left: 5px;
+                    top: 60%;
+                    color: $text-color;
+                    transform:translateY(-80%);
+                    z-index: -1;
+                    transition: .5s;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top:100%;
+                    left: 0px;
+                    width: 0%;
+                    height: 2px;
+                    background: linear-gradient(120deg,#81ecec,#00cec9,#6c5ce7);
+                    transition: .5s;
                 }
             }
             button{
@@ -503,8 +536,9 @@ html{
                 margin-bottom: 30px;
             }
             .form-message{
+                position:relative;
                 font-size: 12px;
-                margin-top: 5px;
+                top: 7px;
                 color:  rgb(245, 86, 80) ;
                 font-weight: 500; 
             }
@@ -522,9 +556,6 @@ html{
             }
         }
     }
-}
-.popup-element.invalid > input {
-    background-color: rgba(255, 0, 0, 0.1) !important;
 }
 // document box
 .documentBox{
@@ -670,6 +701,12 @@ html{
     }
     .upload-hidden{
         visibility: hidden;
+    }
+    .input-title{
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+        font-size: 1.5rem;
     }
 }
 // sidebar
@@ -990,11 +1027,12 @@ html{
 .table{
     margin-top: 20px;
     width: 100%;
-    border:2px solid #ccc;
+    border-bottom:2px solid #ccc;
     border-collapse: collapse;
     th,td{
         height:25px;
-        border: 1px solid #ccc;
+        border-bottom: 2px solid #ccc;
+        padding: 10px 0;
     }
 }
 // coordinator page
