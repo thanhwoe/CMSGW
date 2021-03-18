@@ -934,7 +934,7 @@ html {
 
 .uploadBox {
   margin-top: 50px;
-  padding: 30px;
+  padding: 20px 40px;
   width: 100%;
   height: 50vh;
   -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
@@ -1040,7 +1040,86 @@ html {
 }
 
 .uploadBox .upload-hidden {
+  position: absolute;
+  opacity: 0;
+  right: -99999px;
   visibility: hidden;
+}
+
+.uploadBox .submit-upload {
+  display: none;
+  position: relative;
+  padding: 8px 25px;
+  background: #0c8fda;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.uploadBox .submit-upload:hover {
+  background: #0b7fc2;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.uploadBox label {
+  position: relative;
+  padding: 8px 15px;
+  background: #eee;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.uploadBox label:hover {
+  background: #0c8fda;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.uploadBox .selectedFiles {
+  background: #eee;
+  padding: 15px 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.uploadBox .selectedFiles ul {
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.uploadBox .selectedFiles ul li {
+  padding: 0.5rem 0;
+  padding-right: 2rem;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.uploadBox .selectedFiles ul li i {
+  font-size: 1.4rem;
+  color: #2e2e2e;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
 }
 
 .uploadBox .input-title {
@@ -1048,6 +1127,12 @@ html {
   height: 30px;
   padding: 5px;
   font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+span.file-size {
+  color: #999;
+  padding-left: 0.5rem;
 }
 
 .sidebar {
@@ -1471,9 +1556,43 @@ html {
   outline-offset: 0px;
 }
 
+.admin-body .admin-createUser {
+  position: relative;
+  left: 35px;
+}
+
 .admin-body .admin-createUser .form-group {
   margin: 15px 0;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.admin-body .admin-createUser .form-group label {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.admin-body .admin-createUser .form-group .form-control {
+  margin: 8px;
+  padding: 5px;
+  width: 80%;
+}
+
+.admin-body .admin-createUser .form-group:last-child {
+  padding-left: 33%;
+}
+
+.admin-body .admin-createUser .form-group:last-child input {
+  width: 80px;
 }
 
 .table {

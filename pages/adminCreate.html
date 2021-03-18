@@ -39,7 +39,9 @@
                 <div class="col l-4 l-o-4">
                     <div class="admin-createUser">
                         <form asp-action="Create">
-                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <!-- notification -->
+                            <div asp-validation-summary="All" class="alert-formAdmin"></div> 
+                            
                             <div class="form-group">
                                 <label asp-for="FirstName" class="control-label"></label>
                                 <input asp-for="FirstName" class="form-control" />
