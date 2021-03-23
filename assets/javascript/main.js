@@ -147,7 +147,10 @@ $(document).ready(function () {
         });
         $("#list-Files-Upload").html(fileMap);
     }
-
+    $("#uploadInput").on("change", function () {
+        $(".uploadBox").attr("style","height:auto")
+        
+    })
     // navbar fix layout
     if (!$("#nav-user-box").length) {
         document.querySelector(".search-box").setAttribute(
@@ -205,6 +208,14 @@ $(document).ready(function () {
             $(".logo").attr("style", "height:40px;width:40px; margin-left:5px")
         }
     });
+    // alert handel
+    $("#call-to-action").on("click", function () {
+        var textDangerLength = $(".text-danger").html().length;
+        var textDanger = $(".text-danger").html();
+        if(textDangerLength>2){
+            alert(textDanger)
+        }
+    })
 });
 // validator form login
 function validator(options) {
@@ -269,3 +280,6 @@ validator.minLength = function (selector, min) {
         }
     }
 };
+
+
+

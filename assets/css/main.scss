@@ -251,6 +251,17 @@ html{
             }
         }
     }
+    .user-list-action{
+        transform: translateY(-47%);
+            span{
+                cursor: default;
+                color:$text-color;
+            }
+    }
+    .user-list-action:hover .user-menu{
+        display: block !important;            
+        box-shadow: 0 1px 30px rgba(0,0,0,0.5);
+    }
     
 }
 .navbar{
@@ -483,10 +494,7 @@ html{
                 background: none;
                 color: #333;
                 height: 35px;
-                // &:focus{
-                //     outline: #84BCED auto 1px;
-                //     outline-offset: 0px;
-                // }
+                
             }
             .focuss + .input-effect::before{
                 top:2px;
@@ -756,6 +764,11 @@ html{
 				padding-right:2rem;
 				position:relative;
                 margin-bottom: 5px;
+                -webkit-line-clamp: 1;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
 				i{
                     font-size: 1.4rem;
                     color: $text-color;
@@ -1183,4 +1196,7 @@ span.file-size {
     &:hover{
         background-color: #303952;
     }
+}
+.text-danger{
+    display: none;
 }

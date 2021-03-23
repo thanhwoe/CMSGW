@@ -384,6 +384,22 @@ html {
   margin-bottom: 15px;
 }
 
+.nav-list .user-list-action {
+  -webkit-transform: translateY(-47%);
+          transform: translateY(-47%);
+}
+
+.nav-list .user-list-action span {
+  cursor: default;
+  color: #2e2e2e;
+}
+
+.nav-list .user-list-action:hover .user-menu {
+  display: block !important;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+}
+
 .navbar {
   position: relative;
 }
@@ -1109,6 +1125,11 @@ html {
   padding-right: 2rem;
   position: relative;
   margin-bottom: 5px;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .uploadBox .selectedFiles ul li i {
@@ -1680,5 +1701,9 @@ span.file-size {
 
 .btn-select-docx:hover {
   background-color: #303952;
+}
+
+.text-danger {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
