@@ -212,17 +212,7 @@ html{
             }
         }
         // navbar user
-        &:nth-child(5){
-            transform: translateY(-47%);
-            span{
-                cursor: default;
-                color:$text-color;
-            }
-        }
-        &:nth-child(5):hover .user-menu{
-            display: block !important;            
-            box-shadow: 0 1px 30px rgba(0,0,0,0.5);
-        }
+        
         .navbar-img{
             position: relative;
             width: 30px;
@@ -1115,7 +1105,7 @@ span.file-size {
                 font-weight:400 ;
             }
             .form-control{
-                margin: 8px;
+                margin: 8px 0;
                 padding: 5px;
                 width: 80%;
             }
@@ -1133,10 +1123,36 @@ span.file-size {
     width: 100%;
     border-bottom:2px solid #ccc;
     border-collapse: collapse;
+    text-align: center;
     th,td{
         height:25px;
         border-bottom: 2px solid #ccc;
         padding: 10px 0;
+    }
+    .btn-handle > a{
+        text-decoration: none;
+        
+        padding: 3px 5px;
+        border-radius: 2px;
+        color: $text-color;
+        &:nth-child(1){
+            background-color: #63cdda;
+            &:hover{
+                background-color: #3dc1d3;
+            }
+        }
+        &:nth-child(2){
+            background-color: #f5cd79;
+            &:hover{
+                background-color: #f1be4e;
+            }
+        }
+        &:nth-child(3){
+            background-color: #ff7979;
+            &:hover{
+                background-color: #eb4d4b;
+            }
+        }
     }
 }
 // coordinator page

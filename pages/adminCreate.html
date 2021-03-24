@@ -83,6 +83,22 @@
                                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                             </div>
                             <div class="form-group">
+                                <label asp-for="FacultyID" class="control-label"></label>
+                                <input asp-for="FacultyID" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FacultyID" class="control-label"></label>
+                                <select class="form-control">
+                                    <option value="1">IT</option>
+                                    <option value="2">Desgin</option>
+                                    <option value="3">Tourism</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Thumnail" class="control-label"></label>
+                                <input asp-for="Thumnail" type="file" class="form-control" />
+                            </div>
+                            <div class="form-group">
                                 <input type="submit" value="Create" class="btn" />
                             </div>
                         </form>
