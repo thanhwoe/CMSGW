@@ -622,6 +622,121 @@ html{
     height: 80vh;
     box-sizing: border-box;
     background-color:#dfe4ea;
+    @include flexcontent();
+    #comment-active{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        right: 2px;
+        font-size: 2rem;
+        color: $text-color;
+    }
+    .document-content{
+        position: relative;
+        width: 70%;
+        height: 100%;
+        background-color: #ffffff;
+    }
+    .document-comment{
+        position: relative;
+        width: 30%;
+        height: 100%;
+        background-color:#f1f2f6 ;
+        padding: 50px 20px 0;
+        i{
+            font-size: 1.8rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            color: rgb(173,181,189);
+        }
+        .active-like{
+            color:#EA2027
+        }
+        // .active-comment{
+        //     color:#00a8ff
+        // }
+        .comment-content{
+            padding: 10px 15px;  
+            background-color: #ced6e0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            .comment-userName{
+                font-size: 1.5rem;
+                font-weight: 450;
+                margin-bottom: 5px;
+            }
+            .user-comment{
+                font-size: 1.4rem;
+            }
+        }
+        form{
+            input{
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                margin-bottom: 5px;
+            }
+            button{
+                float: right;
+                display: none;
+            }
+        }
+    }
+    .document-comment-mobi-active{        
+        display: block !important;
+    }
+    .document-comment-mobi{
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color:#f1f2f6 ;
+        bottom: 0px;
+        padding: 10px;
+        animation: mobiComment linear 0.5s;
+        will-change: transform, opacity;
+        i{
+            font-size: 1.8rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            color: rgb(173,181,189);
+        }
+        .active-like{
+            color:#EA2027
+        }
+        // .active-comment{
+        //     color:#00a8ff
+        // }
+        .comment-content{
+            padding: 10px 15px;  
+            background-color: #ced6e0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            .comment-userName{
+                font-size: 1.5rem;
+                font-weight: 450;
+                margin-bottom: 5px;
+            }
+            .user-comment{
+                font-size: 1.4rem;
+            }
+        }
+        form{
+            input{
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                margin-bottom: 5px;
+            }
+            button{
+                float: right;
+                display: none;
+            }
+        }
+    }
 }
 // upload section
 .uploadBox{
@@ -1135,7 +1250,7 @@ span.file-size {
     .btn-handle > a{
         text-decoration: none;
         
-        padding: 3px 5px;
+        padding: 5px 8px;
         border-radius: 2px;
         color: $text-color;
         &:nth-child(1){

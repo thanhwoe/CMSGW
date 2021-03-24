@@ -216,6 +216,35 @@ $(document).ready(function () {
             alert(textDanger)
         }
     })
+    // handle action comment-like
+    $("#action-like").on("click", function () {
+        $("#action-like").toggleClass("active-like");
+    })
+    $("#action-comment").on("click", function () {
+        // $("#action-comment").toggleClass("active-comment");
+        $("#action-comment").attr("style","color:#00a8ff")
+        $("#input-comment").focus();
+    })
+    $("#input-comment").on("blur", function () {
+        // $("#action-comment").toggleClass("active-comment");
+        $("#action-comment").attr("style","color:#ADB5BD")
+    })
+    // mobi
+    $("#action-like-mobi").on("click", function () {
+        $("#action-like-mobi").toggleClass("active-like");
+    })
+    $("#action-comment-mobi").on("click", function () {
+        // $("#action-comment").toggleClass("active-comment");
+        $("#action-comment-mobi").attr("style","color:#00a8ff")
+        $("#input-comment-mobi").focus();
+    })
+    $("#input-comment-mobi").on("blur", function () {
+        // $("#action-comment").toggleClass("active-comment");
+        $("#action-comment-mobi").attr("style","color:#ADB5BD")
+    })
+    $("#comment-active").on("click", function () {
+        $(".document-comment-mobi").toggleClass("document-comment-mobi-active")
+    })
 });
 // validator form login
 function validator(options) {

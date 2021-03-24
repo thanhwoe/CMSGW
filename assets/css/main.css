@@ -60,6 +60,32 @@
   }
 }
 
+@-webkit-keyframes mobiComment {
+  from {
+    -webkit-transform: translateY(140%);
+            transform: translateY(140%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes mobiComment {
+  from {
+    -webkit-transform: translateY(140%);
+            transform: translateY(140%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 #pc {
   overflow: hidden;
 }
@@ -930,6 +956,139 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #dfe4ea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.document-container #comment-active {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+  font-size: 2rem;
+  color: #2e2e2e;
+}
+
+.document-container .document-content {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.document-container .document-comment {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  background-color: #f1f2f6;
+  padding: 50px 20px 0;
+}
+
+.document-container .document-comment i {
+  font-size: 1.8rem;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  color: #adb5bd;
+}
+
+.document-container .document-comment .active-like {
+  color: #EA2027;
+}
+
+.document-container .document-comment .comment-content {
+  padding: 10px 15px;
+  background-color: #ced6e0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.document-container .document-comment .comment-content .comment-userName {
+  font-size: 1.5rem;
+  font-weight: 450;
+  margin-bottom: 5px;
+}
+
+.document-container .document-comment .comment-content .user-comment {
+  font-size: 1.4rem;
+}
+
+.document-container .document-comment form input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.document-container .document-comment form button {
+  float: right;
+  display: none;
+}
+
+.document-container .document-comment-mobi-active {
+  display: block !important;
+}
+
+.document-container .document-comment-mobi {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #f1f2f6;
+  bottom: 0px;
+  padding: 10px;
+  -webkit-animation: mobiComment linear 0.5s;
+          animation: mobiComment linear 0.5s;
+  will-change: transform, opacity;
+}
+
+.document-container .document-comment-mobi i {
+  font-size: 1.8rem;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  color: #adb5bd;
+}
+
+.document-container .document-comment-mobi .active-like {
+  color: #EA2027;
+}
+
+.document-container .document-comment-mobi .comment-content {
+  padding: 10px 15px;
+  background-color: #ced6e0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.document-container .document-comment-mobi .comment-content .comment-userName {
+  font-size: 1.5rem;
+  font-weight: 450;
+  margin-bottom: 5px;
+}
+
+.document-container .document-comment-mobi .comment-content .user-comment {
+  font-size: 1.4rem;
+}
+
+.document-container .document-comment-mobi form input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.document-container .document-comment-mobi form button {
+  float: right;
+  display: none;
 }
 
 .uploadBox {
@@ -1619,7 +1778,7 @@ span.file-size {
 
 .table .btn-handle > a {
   text-decoration: none;
-  padding: 3px 5px;
+  padding: 5px 8px;
   border-radius: 2px;
   color: #2e2e2e;
 }

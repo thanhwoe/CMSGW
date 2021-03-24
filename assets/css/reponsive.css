@@ -115,5 +115,14 @@
   .user-info .user-info-header h4 {
     right: 80px;
   }
+  .document-content {
+    width: 100% !important;
+  }
+  .document-comment {
+    display: none;
+  }
+  #comment-active {
+    display: block !important;
+  }
 }
 /*# sourceMappingURL=reponsive.css.map */

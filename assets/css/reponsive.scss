@@ -118,5 +118,14 @@
             }
         }
     }
+    .document-content{
+        width: 100% !important;
+    }
+    .document-comment{
+        display: none;
+    }
+    #comment-active{
+        display: block !important;
+    }
     
 }
