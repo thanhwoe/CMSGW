@@ -1070,6 +1070,7 @@ span.file-size {
         &:hover{
             background-color: $primary-color;
             font-weight: 500;
+            color: $text-quote;
         }
     }
     .btn-tag{
@@ -1078,6 +1079,8 @@ span.file-size {
     .btn-a{
         top:8px;
         position: relative;
+        text-decoration: none;
+        color: $text-color;
     }
     .admin-search{
         height:26px;

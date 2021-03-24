@@ -1539,6 +1539,7 @@ span.file-size {
 .admin-body .btn:hover {
   background-color: #1D60A6;
   font-weight: 500;
+  color: #FFFFFF;
 }
 
 .admin-body .btn-tag {
@@ -1548,6 +1549,8 @@ span.file-size {
 .admin-body .btn-a {
   top: 8px;
   position: relative;
+  text-decoration: none;
+  color: #2e2e2e;
 }
 
 .admin-body .admin-search {
