@@ -124,5 +124,12 @@
   #comment-active {
     display: block !important;
   }
+  #piechart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px !important;
+    height: 150px !important;
+  }
 }
 /*# sourceMappingURL=reponsive.css.map */

@@ -380,7 +380,12 @@
                                 </div>
                             </div>
                             <div class="content-container-data" id="data-chart">
-                                <div id="piechart"></div>
+
+                                <div class="row">
+                                    <div class="chart-wrap">
+                                        <div id="piechart"></div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- data container end -->
                         </div>
@@ -444,8 +449,10 @@
 </body>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-    google.charts.load('current', {'packages':['corechart']});
+    google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
+    // google.load("visualization", "1", {packages:["corechart"]});
+    // google.setOnLoadCallback(drawChart);
     $('[data-toggle="datepicker"]').datepicker({
         // options
         format: 'mm/yyyy'
@@ -461,20 +468,21 @@
     });
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['IT', 8],
-        ['Business', 2],
-        ['Tourism', 4],
-        ['Design', 2]
+            ['Task', 'documents'],
+            ['IT', 8],
+            ['Business', 2],
+            ['Tourism', 4],
+            ['Design', 2]
         ]);
-
-        // Optional; add a title and set the width and height of the chart
-        var options = {'title':'Percentage of contributions by each Faculty for academic year', 'width':700, 'height':550};
-
-        // Display the chart inside the <div> element with id="piechart"
+        var options = {
+            title: 'Percentage of contributions by each Faculty for academic year',
+            width: '100%',
+            height: '100%'
+        };
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
         chart.draw(data, options);
-    }
+    };
 </script>
 
 </html>
