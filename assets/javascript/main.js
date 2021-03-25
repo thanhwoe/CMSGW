@@ -158,7 +158,7 @@ $(document).ready(function () {
         );
     }
     // show container content data
-    var categoryList = ["All", "Design", "Information Technology", "Business", "Tourism"];
+    var categoryList = ["All", "Design", "Information Technology", "Business", "Tourism", "Chart"];
     var cateSidebar = document.querySelectorAll(".category-sidebar");
     var contentData = document.querySelectorAll(".content-container-data");
     var mobileSibar = document.querySelectorAll(".mSidebar-item");
@@ -309,6 +309,8 @@ validator.minLength = function (selector, min) {
         }
     }
 };
+// chart handler
+
 
 
 

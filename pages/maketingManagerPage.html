@@ -80,6 +80,7 @@
                                 <li id="3" class="category-sidebar" data-id="data-it">Information Technology</li>
                                 <li id="4" class="category-sidebar" data-id="data-business">Business</li>
                                 <li id="5" class="category-sidebar" data-id="data-tourism">Tourism</li>
+                                <li id="6" class="category-sidebar" data-id="data-chart">Chart</li>
                             </ul>
                         </div>
                     </div>
@@ -99,6 +100,7 @@
                                     <li id="3" class="mSidebar-item" data-id="data-it">Information Technology</li>
                                     <li id="4" class="mSidebar-item" data-id="data-business">Business</li>
                                     <li id="5" class="mSidebar-item" data-id="data-tourism">Tourism</li>
+                                    <li id="6" class="mSidebar-item" data-id="data-chart">Chart</li>
                                 </ul>
                             </div>
                             <!-- data container start-->
@@ -377,6 +379,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="content-container-data" id="data-chart">
+                                <div id="piechart"></div>
+                            </div>
                             <!-- data container end -->
                         </div>
 
@@ -437,7 +442,10 @@
         </form>
     </div>
 </body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
     $('[data-toggle="datepicker"]').datepicker({
         // options
         format: 'mm/yyyy'
@@ -451,6 +459,22 @@
             validator.minLength('#password', 6),
         ]
     });
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['IT', 8],
+        ['Business', 2],
+        ['Tourism', 4],
+        ['Design', 2]
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {'title':'Percentage of contributions by each Faculty for academic year', 'width':700, 'height':550};
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+    }
 </script>
 
 </html>
