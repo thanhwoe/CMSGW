@@ -1087,6 +1087,24 @@ span.file-size {
             color: $text-color;
             font-size: 1.4rem;
             margin-bottom: 15px;
+            a{
+                cursor: pointer;
+                height:26px;
+                width: auto;
+                padding:5px;
+                border: 2px solid $primary-color;
+                background-color:#FFFFFF;
+                border-radius:2px;
+                font-size: 1.4rem;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                color: $text-color;
+                &:hover{
+                    background-color: $primary-color;
+                    font-weight: 500;
+                    color: $text-quote;
+                }
+            }
         }
     }
 }
@@ -1365,6 +1383,7 @@ span.file-size {
     align-items: center;
     font-weight: 100;
     .time-date{
+        width: 80px;
         margin-right: 26px;
         font-size: 1.4rem;
     }

@@ -1559,6 +1559,27 @@ span.file-size {
   margin-bottom: 15px;
 }
 
+.user-info .list-user-info li a {
+  cursor: pointer;
+  height: 26px;
+  width: auto;
+  padding: 5px;
+  border: 2px solid #1D60A6;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+.user-info .list-user-info li a:hover {
+  background-color: #1D60A6;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
 .mobile-sidebar {
   display: none;
   margin-bottom: 20px;
@@ -1930,6 +1951,7 @@ span.file-size {
 }
 
 .timeStamp .time-date {
+  width: 80px;
   margin-right: 26px;
   font-size: 1.4rem;
 }
