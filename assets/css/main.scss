@@ -1326,6 +1326,7 @@ span.file-size {
             font-weight: 500;
             &:nth-child(1){
                 background-color: #63cdda;
+                width: 70px;
                 &:hover{
                     background-color: #3dc1d3;
                 }
@@ -1334,6 +1335,12 @@ span.file-size {
                 background-color: #f5cd79;
                 &:hover{
                     background-color: #f1be4e;
+                }
+            }
+            &:nth-child(3){
+                background-color: #ff7675;
+                &:hover{
+                    background-color: #fa5c5c;
                 }
             }
         }

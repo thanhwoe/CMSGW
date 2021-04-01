@@ -1877,6 +1877,7 @@ span.file-size {
 
 .coor-list-docx .handle-coor a:nth-child(1) {
   background-color: #63cdda;
+  width: 70px;
 }
 
 .coor-list-docx .handle-coor a:nth-child(1):hover {
@@ -1889,6 +1890,14 @@ span.file-size {
 
 .coor-list-docx .handle-coor a:nth-child(2):hover {
   background-color: #f1be4e;
+}
+
+.coor-list-docx .handle-coor a:nth-child(3) {
+  background-color: #ff7675;
+}
+
+.coor-list-docx .handle-coor a:nth-child(3):hover {
+  background-color: #fa5c5c;
 }
 
 .btn-select-docx {

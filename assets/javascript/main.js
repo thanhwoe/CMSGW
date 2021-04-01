@@ -75,6 +75,9 @@ $(document).ready(function () {
         console.log("text");
         $(".popup-document").addClass("show-popup")
     });
+    $("#showDocument-box").on("click", function (e) {
+        $(".popup-document").addClass("show-popup")
+    });
     $('.popup-overlay').on("click", function () {
         var popDocEvent = $(".popup-document").hasClass("show-popup");
         var popLoginEvent = $(".popup").hasClass("show-popup");

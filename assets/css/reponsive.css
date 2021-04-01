@@ -131,5 +131,14 @@
     width: 300px !important;
     height: 150px !important;
   }
+  .time-item {
+    position: relative;
+  }
+  .time-item:first-child {
+    left: 25%;
+  }
+  .time-item:last-child {
+    right: 20%;
+  }
 }
 /*# sourceMappingURL=reponsive.css.map */

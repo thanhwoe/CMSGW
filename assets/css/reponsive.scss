@@ -134,4 +134,13 @@
         width:300px !important;
         height:150px !important;
     }
+    .time-item{
+        position: relative;
+        &:first-child{
+            left: 25%;
+        }
+        &:last-child{
+            right: 20%;
+        }
+    }
 }
