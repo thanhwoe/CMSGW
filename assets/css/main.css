@@ -1009,11 +1009,11 @@ html {
   background-color: #027a74;
 }
 
-.document-container .document-content a:nth-child() {
+.document-container .document-content a:last-child {
   background-color: #eb2f06;
 }
 
-.document-container .document-content a:nth-child():hover {
+.document-container .document-content a:last-child:hover {
   background-color: #b42606;
 }
 
