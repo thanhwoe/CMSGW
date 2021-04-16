@@ -981,6 +981,40 @@ html {
   width: 70%;
   height: 100%;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.document-container .document-content a {
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 15px 25px;
+  margin: 0 20px;
+  color: #FFFFFF;
+}
+
+.document-container .document-content a:first-child {
+  background-color: #079992;
+}
+
+.document-container .document-content a:first-child:hover {
+  background-color: #027a74;
+}
+
+.document-container .document-content a:nth-child() {
+  background-color: #eb2f06;
+}
+
+.document-container .document-content a:nth-child():hover {
+  background-color: #b42606;
 }
 
 .document-container .document-comment {
@@ -989,6 +1023,19 @@ html {
   height: 100%;
   background-color: #f1f2f6;
   padding: 50px 20px 0;
+}
+
+.document-container .document-comment a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 2px 15px;
+  border-radius: 3px;
+}
+
+.document-container .document-comment a:hover {
+  background-color: black;
+  color: white;
 }
 
 .document-container .document-comment i {

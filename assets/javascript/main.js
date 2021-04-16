@@ -213,8 +213,9 @@ $(document).ready(function () {
     });
     // alert handel
     $("#call-to-action").on("click", function () {
-        var textDangerLength = $(".text-danger").html().length;
-        var textDanger = $(".text-danger").html();
+        var textDanger = $(".text-danger").children().children().html();
+        var textDangerLength = textDanger.length;
+        
         if(textDangerLength>2){
             alert(textDanger)
         }
